@@ -23,7 +23,10 @@ fi
 rm -rf {ndk-patches,packages,x11-packages,root-packages,scripts,build-all.sh,build-package.sh,clean.sh}
 
 # Move build environment scripts to this folder
-mv ./termux-packages/{ndk-patches,packages,x11-packages,root-packages,scripts,build-all.sh,build-package.sh,clean.sh} ./
+for f in ndk-patches packages x11-packages root-packages scripts build-all.sh build-package.sh clean.sh; do
+	rm -rf ./$f
+	ln -sv ./termux-packages/$f .
+done
 
 # Apply script patches.
 shopt -s nullglob
