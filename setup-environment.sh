@@ -16,7 +16,7 @@ if [ -d "./termux-packages" ] && [ -d "./termux-packages/.git" ]; then
 	popd
 else
 	rm -rf ./termux-packages
-	git clone https://github.com/termux/termux-packages.git
+	git clone --depth 1 https://github.com/hominidaerapiste/termux-packages
 fi
 
 # Remove old stuffs
