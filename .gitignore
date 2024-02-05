@@ -1,5 +1,4 @@
 # These files are from termux/termux-packages
-/termux-packages
 /disabled-packages
 /ndk-patches
 /packages
